@@ -3,26 +3,26 @@ SalesCon is a centralized digital platform designed to streamline food vendor ma
 
 # 🧩 Features
 ### 🎪 For Vendors:
-Vendor Registration & Login
+- Vendor Registration & Login
 
-Browse Upcoming Events
+- Browse Upcoming Events
 
-Apply for Slot Rentals
+- Apply for Slot Rentals
 
-Online Payment Integration
+- Online Payment Integration
 
-View Booking History
+- View Booking History
 
 ### 🧑‍💼 For Event Organizers:
-Dashboard with Vendor & Event Analytics
+- Dashboard with Vendor & Event Analytics
 
-Manage Vendor Applications
+- Manage Vendor Applications
 
-View Payment Statuses
+- View Payment Statuses
 
-Approve or Reject Slot Requests
-
-Publish Event Reports
+-Approve or Reject Slot Requests
+ 
+- Publish Event Reports
 
 # 🌱 SDG Alignment
 SalesCon supports Sustainable Development Goal (SDG) 8: Decent Work and Economic Growth by promoting sustainable, organized, and accessible economic opportunities for local food vendors.
