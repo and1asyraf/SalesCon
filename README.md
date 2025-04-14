@@ -1,5 +1,6 @@
+![SalesCon Logo](Static/images/SalesConLogo.png)
 # 🚀 SalesCon   
-SalesCon is a centralized digital platform designed to streamline food vendor management for campus events at Universiti Sains Malaysia (USM). It enables vendors to register, book event slots, manage payments, and comply with event regulations—all in one place.
+SalesCon is a centralized digital platform designed to streamline food vendor management for campus events at Universiti Sains Malaysia (USM). It enables vendors to register, book event slots, manage payments, and comply with event regulations—all in one place. 
 
 # 🧩 Features
 ### 🎪 For Vendors:
