@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Event</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/addEventStyles.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}" defer></script> <!-- Use the shared script.js -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <a href="/homeAdmin">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/homeAdmin">Home</a>
+            <a href="/aboutAdmin">About</a>
+            <a href="/contactAdmin">Contact Us</a>
+            <a href="/profileAdmin" id="profile-button">Profile</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Add Event</h1>
+        <form id="add-event-form">
+            <div class="form-group">
+                <label for="event-name">Event Name</label>
+                <input type="text" id="event-name" name="event-name" placeholder="Enter event name" required>
+            </div>
+            <div class="form-group">
+                <label for="event-date">Event Date</label>
+                <input type="date" id="event-date" name="event-date" required>
+            </div>
+            <div class="form-group">
+                <label for="event-location">Event Location</label>
+                <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
+            </div>
+            <div class="form-group">
+                <label for="event-crowd">Expected Crowd</label>
+                <input type="number" id="event-crowd" name="event-crowd" placeholder="Enter expected crowd" required>
+            </div>
+            <div class="form-group">
+                <label for="event-attire">Attire</label>
+                <input type="text" id="event-attire" name="event-attire" placeholder="Enter event attire" required>
+            </div>
+            <div class="form-group">
+                <label for="event-slots">Available Slots</label>
+                <input type="number" id="event-slots" name="event-slots" placeholder="Enter number of slots" required>
+            </div>
+            <div class="form-group">
+                <label for="event-description">Description</label>
+                <textarea id="event-description" name="event-description" placeholder="Enter event description" rows="5" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </form>
+        <div id="success-message" class="success-message" style="display: none;">
+            Event added successfully!
+        </div>
+    </div>
+
+    <script>
+        // Use the shared Supabase client from script.js
+        const form = document.getElementById("add-event-form");
+
+        form.addEventListener("submit", async function (e) {
+            e.preventDefault();
+
+            // Get form data
+            const eventName = document.getElementById("event-name").value.trim();
+            const eventDate = document.getElementById("event-date").value;
+            const eventLocation = document.getElementById("event-location").value.trim();
+            const eventCrowd = parseInt(document.getElementById("event-crowd").value, 10);
+            const eventAttire = document.getElementById("event-attire").value.trim();
+            const eventSlots = parseInt(document.getElementById("event-slots").value, 10);
+            const eventDescription = document.getElementById("event-description").value.trim();
+
+            // Validate numeric fields
+            if (isNaN(eventCrowd) || isNaN(eventSlots)) {
+                alert("Please enter valid numbers for crowd and slots.");
+                return;
+            }
+
+            try {
+                // Insert data into the 'events' table
+                const { data, error } = await supabaseClient
+                    .from("events")
+                    .insert([
+                        {
+                            name: eventName,
+                            date: eventDate,
+                            location: eventLocation,
+                            expected_crowd: eventCrowd,
+                            attire: eventAttire,
+                            description: eventDescription,
+                            available_slots: eventSlots
+                        }
+                    ]);
+
+                if (error) {
+                    console.error("Error adding event:", error);
+                    alert("Failed to add event. Please try again.");
+                } else {
+                    console.log("Event added:", data);
+                    document.getElementById("success-message").style.display = "block";
+                    form.reset(); // Clear the form fields
+                }
+            } catch (err) {
+                console.error("Unexpected error:", err);
+                alert("An unexpected error occurred. Please try again.");
+            }
+        });
+    </script>
+</body>
+</html>

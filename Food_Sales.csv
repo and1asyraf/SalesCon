@@ -1,0 +1,421 @@
+Day,Time Period,Food Sold,Quantity
+Monday,Morning,Ais Kacang,7
+Monday,Morning,Bandung Syrup,14
+Monday,Morning,Cendol,3
+Monday,Morning,Char Kway Teow,7
+Monday,Morning,Kari Puff,13
+Monday,Morning,Kopi O,12
+Monday,Morning,Kuih-muih,23
+Monday,Morning,Laksa,21
+Monday,Morning,Lemang,5
+Monday,Morning,Mee Bandung,17
+Monday,Morning,Mee Goreng,13
+Monday,Morning,Milo Ice,19
+Monday,Morning,Nasi Ayam,10
+Monday,Morning,Nasi Kerabu,12
+Monday,Morning,Nasi Lemak,24
+Monday,Morning,Pisang Goreng,7
+Monday,Morning,Rendang,6
+Monday,Morning,Roti Canai,29
+Monday,Morning,Satay,6
+Monday,Morning,Teh Tarik,19
+Monday,Afternoon,Ais Kacang,15
+Monday,Afternoon,Bandung Syrup,18
+Monday,Afternoon,Cendol,12
+Monday,Afternoon,Char Kway Teow,9
+Monday,Afternoon,Kari Puff,4
+Monday,Afternoon,Kopi O,6
+Monday,Afternoon,Kuih-muih,8
+Monday,Afternoon,Laksa,10
+Monday,Afternoon,Lemang,17
+Monday,Afternoon,Mee Bandung,7
+Monday,Afternoon,Mee Goreng,12
+Monday,Afternoon,Milo Ice,9
+Monday,Afternoon,Nasi Ayam,21
+Monday,Afternoon,Nasi Kerabu,10
+Monday,Afternoon,Nasi Lemak,6
+Monday,Afternoon,Pisang Goreng,11
+Monday,Afternoon,Rendang,13
+Monday,Afternoon,Roti Canai,5
+Monday,Afternoon,Satay,9
+Monday,Afternoon,Teh Tarik,7
+Monday,Evening,Ais Kacang,11
+Monday,Evening,Bandung Syrup,14
+Monday,Evening,Cendol,16
+Monday,Evening,Char Kway Teow,18
+Monday,Evening,Kari Puff,6
+Monday,Evening,Kopi O,8
+Monday,Evening,Kuih-muih,5
+Monday,Evening,Laksa,9
+Monday,Evening,Lemang,14
+Monday,Evening,Mee Bandung,12
+Monday,Evening,Mee Goreng,19
+Monday,Evening,Milo Ice,7
+Monday,Evening,Nasi Ayam,12
+Monday,Evening,Nasi Kerabu,7
+Monday,Evening,Nasi Lemak,8
+Monday,Evening,Pisang Goreng,13
+Monday,Evening,Rendang,14
+Monday,Evening,Roti Canai,3
+Monday,Evening,Satay,23
+Monday,Evening,Teh Tarik,10
+Tuesday,Morning,Ais Kacang,8
+Tuesday,Morning,Bandung Syrup,12
+Tuesday,Morning,Cendol,5
+Tuesday,Morning,Char Kway Teow,5
+Tuesday,Morning,Kari Puff,15
+Tuesday,Morning,Kopi O,16
+Tuesday,Morning,Kuih-muih,22
+Tuesday,Morning,Laksa,24
+Tuesday,Morning,Lemang,7
+Tuesday,Morning,Mee Bandung,15
+Tuesday,Morning,Mee Goreng,15
+Tuesday,Morning,Milo Ice,17
+Tuesday,Morning,Nasi Ayam,9
+Tuesday,Morning,Nasi Kerabu,14
+Tuesday,Morning,Nasi Lemak,27
+Tuesday,Morning,Pisang Goreng,9
+Tuesday,Morning,Rendang,8
+Tuesday,Morning,Roti Canai,26
+Tuesday,Morning,Satay,7
+Tuesday,Morning,Teh Tarik,17
+Tuesday,Afternoon,Ais Kacang,14
+Tuesday,Afternoon,Bandung Syrup,20
+Tuesday,Afternoon,Cendol,15
+Tuesday,Afternoon,Char Kway Teow,11
+Tuesday,Afternoon,Kari Puff,5
+Tuesday,Afternoon,Kopi O,2
+Tuesday,Afternoon,Kuih-muih,6
+Tuesday,Afternoon,Laksa,14
+Tuesday,Afternoon,Lemang,16
+Tuesday,Afternoon,Mee Bandung,6
+Tuesday,Afternoon,Mee Goreng,15
+Tuesday,Afternoon,Milo Ice,6
+Tuesday,Afternoon,Nasi Ayam,25
+Tuesday,Afternoon,Nasi Kerabu,11
+Tuesday,Afternoon,Nasi Lemak,4
+Tuesday,Afternoon,Pisang Goreng,17
+Tuesday,Afternoon,Rendang,12
+Tuesday,Afternoon,Roti Canai,4
+Tuesday,Afternoon,Satay,7
+Tuesday,Afternoon,Teh Tarik,5
+Tuesday,Evening,Ais Kacang,12
+Tuesday,Evening,Bandung Syrup,15
+Tuesday,Evening,Cendol,15
+Tuesday,Evening,Char Kway Teow,18
+Tuesday,Evening,Kari Puff,4
+Tuesday,Evening,Kopi O,7
+Tuesday,Evening,Kuih-muih,5
+Tuesday,Evening,Laksa,6
+Tuesday,Evening,Lemang,17
+Tuesday,Evening,Mee Bandung,15
+Tuesday,Evening,Mee Goreng,13
+Tuesday,Evening,Milo Ice,6
+Tuesday,Evening,Nasi Ayam,13
+Tuesday,Evening,Nasi Kerabu,9
+Tuesday,Evening,Nasi Lemak,5
+Tuesday,Evening,Pisang Goreng,10
+Tuesday,Evening,Rendang,15
+Tuesday,Evening,Roti Canai,4
+Tuesday,Evening,Satay,21
+Tuesday,Evening,Teh Tarik,15
+Wednesday,Morning,Ais Kacang,5
+Wednesday,Morning,Bandung Syrup,11
+Wednesday,Morning,Cendol,6
+Wednesday,Morning,Char Kway Teow,8
+Wednesday,Morning,Kari Puff,17
+Wednesday,Morning,Kopi O,11
+Wednesday,Morning,Kuih-muih,10
+Wednesday,Morning,Laksa,19
+Wednesday,Morning,Lemang,6
+Wednesday,Morning,Mee Bandung,14
+Wednesday,Morning,Mee Goreng,17
+Wednesday,Morning,Milo Ice,16
+Wednesday,Morning,Nasi Ayam,10
+Wednesday,Morning,Nasi Kerabu,14
+Wednesday,Morning,Nasi Lemak,21
+Wednesday,Morning,Pisang Goreng,6
+Wednesday,Morning,Rendang,8
+Wednesday,Morning,Roti Canai,26
+Wednesday,Morning,Satay,4
+Wednesday,Morning,Teh Tarik,16
+Wednesday,Afternoon,Ais Kacang,18
+Wednesday,Afternoon,Bandung Syrup,14
+Wednesday,Afternoon,Cendol,15
+Wednesday,Afternoon,Char Kway Teow,9
+Wednesday,Afternoon,Kari Puff,6
+Wednesday,Afternoon,Kopi O,3
+Wednesday,Afternoon,Kuih-muih,6
+Wednesday,Afternoon,Laksa,14
+Wednesday,Afternoon,Lemang,15
+Wednesday,Afternoon,Mee Bandung,10
+Wednesday,Afternoon,Mee Goreng,16
+Wednesday,Afternoon,Milo Ice,6
+Wednesday,Afternoon,Nasi Ayam,18
+Wednesday,Afternoon,Nasi Kerabu,16
+Wednesday,Afternoon,Nasi Lemak,8
+Wednesday,Afternoon,Pisang Goreng,15
+Wednesday,Afternoon,Rendang,14
+Wednesday,Afternoon,Roti Canai,6
+Wednesday,Afternoon,Satay,7
+Wednesday,Afternoon,Teh Tarik,9
+Wednesday,Evening,Ais Kacang,13
+Wednesday,Evening,Bandung Syrup,17
+Wednesday,Evening,Cendol,19
+Wednesday,Evening,Char Kway Teow,21
+Wednesday,Evening,Kari Puff,8
+Wednesday,Evening,Kopi O,11
+Wednesday,Evening,Kuih-muih,6
+Wednesday,Evening,Laksa,6
+Wednesday,Evening,Lemang,11
+Wednesday,Evening,Mee Bandung,15
+Wednesday,Evening,Mee Goreng,17
+Wednesday,Evening,Milo Ice,9
+Wednesday,Evening,Nasi Ayam,16
+Wednesday,Evening,Nasi Kerabu,4
+Wednesday,Evening,Nasi Lemak,10
+Wednesday,Evening,Pisang Goreng,17
+Wednesday,Evening,Rendang,13
+Wednesday,Evening,Roti Canai,6
+Wednesday,Evening,Satay,19
+Wednesday,Evening,Teh Tarik,13
+Thursday,Morning,Ais Kacang,4
+Thursday,Morning,Bandung Syrup,11
+Thursday,Morning,Cendol,4
+Thursday,Morning,Char Kway Teow,6
+Thursday,Morning,Kari Puff,14
+Thursday,Morning,Kopi O,15
+Thursday,Morning,Kuih-muih,21
+Thursday,Morning,Laksa,19
+Thursday,Morning,Lemang,7
+Thursday,Morning,Mee Bandung,15
+Thursday,Morning,Mee Goreng,16
+Thursday,Morning,Milo Ice,16
+Thursday,Morning,Nasi Ayam,6
+Thursday,Morning,Nasi Kerabu,15
+Thursday,Morning,Nasi Lemak,27
+Thursday,Morning,Pisang Goreng,5
+Thursday,Morning,Rendang,8
+Thursday,Morning,Roti Canai,27
+Thursday,Morning,Satay,4
+Thursday,Morning,Teh Tarik,17
+Thursday,Afternoon,Ais Kacang,19
+Thursday,Afternoon,Bandung Syrup,15
+Thursday,Afternoon,Cendol,17
+Thursday,Afternoon,Char Kway Teow,6
+Thursday,Afternoon,Kari Puff,8
+Thursday,Afternoon,Kopi O,3
+Thursday,Afternoon,Kuih-muih,6
+Thursday,Afternoon,Laksa,7
+Thursday,Afternoon,Lemang,18
+Thursday,Afternoon,Mee Bandung,7
+Thursday,Afternoon,Mee Goreng,16
+Thursday,Afternoon,Milo Ice,7
+Thursday,Afternoon,Nasi Ayam,18
+Thursday,Afternoon,Nasi Kerabu,14
+Thursday,Afternoon,Nasi Lemak,8
+Thursday,Afternoon,Pisang Goreng,17
+Thursday,Afternoon,Rendang,13
+Thursday,Afternoon,Roti Canai,7
+Thursday,Afternoon,Satay,6
+Thursday,Afternoon,Teh Tarik,6
+Thursday,Evening,Ais Kacang,15
+Thursday,Evening,Bandung Syrup,13
+Thursday,Evening,Cendol,17
+Thursday,Evening,Char Kway Teow,15
+Thursday,Evening,Kari Puff,5
+Thursday,Evening,Kopi O,7
+Thursday,Evening,Kuih-muih,3
+Thursday,Evening,Laksa,11
+Thursday,Evening,Lemang,13
+Thursday,Evening,Mee Bandung,16
+Thursday,Evening,Mee Goreng,21
+Thursday,Evening,Milo Ice,6
+Thursday,Evening,Nasi Ayam,13
+Thursday,Evening,Nasi Kerabu,9
+Thursday,Evening,Nasi Lemak,5
+Thursday,Evening,Pisang Goreng,11
+Thursday,Evening,Rendang,12
+Thursday,Evening,Roti Canai,7
+Thursday,Evening,Satay,21
+Thursday,Evening,Teh Tarik,8
+Friday,Morning,Ais Kacang,5
+Friday,Morning,Bandung Syrup,11
+Friday,Morning,Cendol,6
+Friday,Morning,Char Kway Teow,9
+Friday,Morning,Kari Puff,17
+Friday,Morning,Kopi O,13
+Friday,Morning,Kuih-muih,20
+Friday,Morning,Laksa,24
+Friday,Morning,Lemang,7
+Friday,Morning,Mee Bandung,15
+Friday,Morning,Mee Goreng,17
+Friday,Morning,Milo Ice,15
+Friday,Morning,Nasi Ayam,7
+Friday,Morning,Nasi Kerabu,10
+Friday,Morning,Nasi Lemak,21
+Friday,Morning,Pisang Goreng,8
+Friday,Morning,Rendang,3
+Friday,Morning,Roti Canai,25
+Friday,Morning,Satay,8
+Friday,Morning,Teh Tarik,15
+Friday,Afternoon,Ais Kacang,16
+Friday,Afternoon,Bandung Syrup,17
+Friday,Afternoon,Cendol,15
+Friday,Afternoon,Char Kway Teow,10
+Friday,Afternoon,Kari Puff,6
+Friday,Afternoon,Kopi O,7
+Friday,Afternoon,Kuih-muih,5
+Friday,Afternoon,Laksa,15
+Friday,Afternoon,Lemang,14
+Friday,Afternoon,Mee Bandung,6
+Friday,Afternoon,Mee Goreng,15
+Friday,Afternoon,Milo Ice,11
+Friday,Afternoon,Nasi Ayam,13
+Friday,Afternoon,Nasi Kerabu,15
+Friday,Afternoon,Nasi Lemak,4
+Friday,Afternoon,Pisang Goreng,16
+Friday,Afternoon,Rendang,14
+Friday,Afternoon,Roti Canai,3
+Friday,Afternoon,Satay,11
+Friday,Afternoon,Teh Tarik,4
+Friday,Evening,Ais Kacang,16
+Friday,Evening,Bandung Syrup,13
+Friday,Evening,Cendol,10
+Friday,Evening,Char Kway Teow,16
+Friday,Evening,Kari Puff,4
+Friday,Evening,Kopi O,5
+Friday,Evening,Kuih-muih,6
+Friday,Evening,Laksa,9
+Friday,Evening,Lemang,16
+Friday,Evening,Mee Bandung,11
+Friday,Evening,Mee Goreng,17
+Friday,Evening,Milo Ice,5
+Friday,Evening,Nasi Ayam,16
+Friday,Evening,Nasi Kerabu,5
+Friday,Evening,Nasi Lemak,3
+Friday,Evening,Pisang Goreng,17
+Friday,Evening,Rendang,12
+Friday,Evening,Roti Canai,3
+Friday,Evening,Satay,15
+Friday,Evening,Teh Tarik,16
+Saturday,Morning,Ais Kacang,7
+Saturday,Morning,Bandung Syrup,15
+Saturday,Morning,Cendol,8
+Saturday,Morning,Char Kway Teow,14
+Saturday,Morning,Kari Puff,19
+Saturday,Morning,Kopi O,16
+Saturday,Morning,Kuih-muih,25
+Saturday,Morning,Laksa,28
+Saturday,Morning,Lemang,9
+Saturday,Morning,Mee Bandung,17
+Saturday,Morning,Mee Goreng,20
+Saturday,Morning,Milo Ice,20
+Saturday,Morning,Nasi Ayam,11
+Saturday,Morning,Nasi Kerabu,16
+Saturday,Morning,Nasi Lemak,26
+Saturday,Morning,Pisang Goreng,12
+Saturday,Morning,Rendang,5
+Saturday,Morning,Roti Canai,29
+Saturday,Morning,Satay,11
+Saturday,Morning,Teh Tarik,17
+Saturday,Afternoon,Ais Kacang,19
+Saturday,Afternoon,Bandung Syrup,20
+Saturday,Afternoon,Cendol,19
+Saturday,Afternoon,Char Kway Teow,15
+Saturday,Afternoon,Kari Puff,10
+Saturday,Afternoon,Kopi O,9
+Saturday,Afternoon,Kuih-muih,8
+Saturday,Afternoon,Laksa,17
+Saturday,Afternoon,Lemang,19
+Saturday,Afternoon,Mee Bandung,10
+Saturday,Afternoon,Mee Goreng,17
+Saturday,Afternoon,Milo Ice,15
+Saturday,Afternoon,Nasi Ayam,17
+Saturday,Afternoon,Nasi Kerabu,19
+Saturday,Afternoon,Nasi Lemak,7
+Saturday,Afternoon,Pisang Goreng,21
+Saturday,Afternoon,Rendang,17
+Saturday,Afternoon,Roti Canai,5
+Saturday,Afternoon,Satay,14
+Saturday,Afternoon,Teh Tarik,6
+Saturday,Evening,Ais Kacang,19
+Saturday,Evening,Bandung Syrup,17
+Saturday,Evening,Cendol,14
+Saturday,Evening,Char Kway Teow,18
+Saturday,Evening,Kari Puff,6
+Saturday,Evening,Kopi O,6
+Saturday,Evening,Kuih-muih,8
+Saturday,Evening,Laksa,11
+Saturday,Evening,Lemang,21
+Saturday,Evening,Mee Bandung,16
+Saturday,Evening,Mee Goreng,22
+Saturday,Evening,Milo Ice,8
+Saturday,Evening,Nasi Ayam,11
+Saturday,Evening,Nasi Kerabu,9
+Saturday,Evening,Nasi Lemak,7
+Saturday,Evening,Pisang Goreng,20
+Saturday,Evening,Rendang,15
+Saturday,Evening,Roti Canai,6
+Saturday,Evening,Satay,17
+Saturday,Evening,Teh Tarik,19
+Sunday,Morning,Ais Kacang,6
+Sunday,Morning,Bandung Syrup,16
+Sunday,Morning,Cendol,7
+Sunday,Morning,Char Kway Teow,15
+Sunday,Morning,Kari Puff,18
+Sunday,Morning,Kopi O,15
+Sunday,Morning,Kuih-muih,27
+Sunday,Morning,Laksa,26
+Sunday,Morning,Lemang,10
+Sunday,Morning,Mee Bandung,16
+Sunday,Morning,Mee Goreng,18
+Sunday,Morning,Milo Ice,21
+Sunday,Morning,Nasi Ayam,16
+Sunday,Morning,Nasi Kerabu,19
+Sunday,Morning,Nasi Lemak,24
+Sunday,Morning,Pisang Goreng,11
+Sunday,Morning,Rendang,6
+Sunday,Morning,Roti Canai,26
+Sunday,Morning,Satay,13
+Sunday,Morning,Teh Tarik,16
+Sunday,Afternoon,Ais Kacang,19
+Sunday,Afternoon,Bandung Syrup,18
+Sunday,Afternoon,Cendol,16
+Sunday,Afternoon,Char Kway Teow,18
+Sunday,Afternoon,Kari Puff,8
+Sunday,Afternoon,Kopi O,6
+Sunday,Afternoon,Kuih-muih,7
+Sunday,Afternoon,Laksa,15
+Sunday,Afternoon,Lemang,18
+Sunday,Afternoon,Mee Bandung,12
+Sunday,Afternoon,Mee Goreng,16
+Sunday,Afternoon,Milo Ice,13
+Sunday,Afternoon,Nasi Ayam,19
+Sunday,Afternoon,Nasi Kerabu,17
+Sunday,Afternoon,Nasi Lemak,5
+Sunday,Afternoon,Pisang Goreng,19
+Sunday,Afternoon,Rendang,18
+Sunday,Afternoon,Roti Canai,7
+Sunday,Afternoon,Satay,16
+Sunday,Afternoon,Teh Tarik,8
+Sunday,Evening,Ais Kacang,16
+Sunday,Evening,Bandung Syrup,18
+Sunday,Evening,Cendol,17
+Sunday,Evening,Char Kway Teow,16
+Sunday,Evening,Kari Puff,3
+Sunday,Evening,Kopi O,6
+Sunday,Evening,Kuih-muih,9
+Sunday,Evening,Laksa,15
+Sunday,Evening,Lemang,19
+Sunday,Evening,Mee Bandung,18
+Sunday,Evening,Mee Goreng,19
+Sunday,Evening,Milo Ice,9
+Sunday,Evening,Nasi Ayam,15
+Sunday,Evening,Nasi Kerabu,7
+Sunday,Evening,Nasi Lemak,3
+Sunday,Evening,Pisang Goreng,18
+Sunday,Evening,Rendang,16
+Sunday,Evening,Roti Canai,4
+Sunday,Evening,Satay,15
+Sunday,Evening,Teh Tarik,16

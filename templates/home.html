@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalesCon Home Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/jsQR"></script>
+
+</head>
+    <nav>
+        <div class="nav-left">
+            <a href="/home">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo" />
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/home">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+            <a href="/profile" id="profile-button">Profile</a>
+          </div>
+    </nav>
+
+  <div class="container"> 
+    <h1>Event Booking</h1> 
+    
+    <div id="events-list"> 
+      <!-- Events will be dynamically inserted here -->
+    </div> 
+  </div> 
+
+  <!-- Payment Form Modal -->
+  <div id="payment-modal" class="modal">
+    <div class="modal-content">
+      <h2>Payment Confirmation</h2>
+      <form id="payment-form">
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" required placeholder="Card Number">
+        <button type="submit">Confirm Payment</button>
+      </form>
+      <button id="close-modal1" class="close-btn">Cancel</button>
+    </div>
+  </div>
+<!-- 
+  Rating Modal -->
+<!-- <div id="rating-modal" class="modal">
+  <div class="modal-content">
+    <h2>Rate Event</h2>
+    <form id="rating-form">
+      <label for="rating">Rating (1-5):</label>
+      <input type="number" id="rating" min="1" max="5" required>
+
+      <label for="feedback">Feedback:</label>
+      <textarea id="feedback" rows="4" placeholder="Share your experience"></textarea>
+
+      <button type="submit">Submit Rating</button>
+    </form>
+    <button id="close-rating-modal" class="close-btn">Cancel</button>
+  </div>
+</div>
+
+
+  <div id="qr-modal" class="modal">
+    <div class="modal-content">
+      <h2>Booking Confirmation</h2>
+      <p>Thank you for booking!</p>
+        <div id="qrcode" class="qrcodec"></div>
+      <button id="close-modal2" class="close-btn">Close</button>
+    </div>
+  </div> -->
+
+  <!-- Rating Modal -->
+<div id="rating-modal" class="modal">
+  <div class="modal-content">
+    <h2>Rate Hygiene</h2>
+    <form id="rating-form" class="modal-form">
+      <div class="form-group">
+        <label for="rating" class="form-label">Your Rating:</label>
+        <input 
+          type="number" 
+          id="rating" 
+          min="1" 
+          max="5" 
+          placeholder="Rate between 1 to 5"
+          required 
+          class="form-input">
+      </div>
+
+      <div class="form-group">
+        <label for="feedback" class="form-label">Your Feedback:</label>
+        <textarea 
+          id="feedback" 
+          rows="4" 
+          placeholder="Share your thoughts about the event..." 
+          class="form-textarea"></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button type="submit" class="btn primary-btn">Submit Rating</button>
+        <button id="close-rating-modal" type="button" class="btn secondary-btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<!-- QR Modal -->
+<div id="qr-modal" class="modal">
+  <div class="modal-content">
+    <h2>Booking Confirmation</h2>
+    <p class="modal-message">Thank you for your booking! Please save or scan the QR code below for confirmation:</p>
+    <div id="qrcode" class="qrcode-container"></div>
+    <div class="modal-actions">
+      <button id="close-modal2" class="btn primary-btn">Close</button>
+    </div>
+  </div>
+</div>
+
+  <!-- <div id="qr-container" class="qr-container hidden">
+    <h2>Your Booking Confirmation</h2>
+    <canvas id="qr-code"></canvas>
+  </div> -->
+
+
+
+  <!-- <script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "http://jindo.dev.naver.com/collie");
+  </script> -->
+
+  
+
+  <!-- <script>
+    let qrContentInput = document.getElementById("card-number");
+    let qrGenerationForm = document.getElementById("payment-form");
+    let qrCode;
+    
+    function generateQrCode(qrContent) {
+      return new QRCode("qr-code", {
+        text: qrContent,
+        width: 256,
+        height: 256,
+        colorDark: "#000000",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.H,
+      });
+    }
+    
+    // Event listener for form submit event
+    qrGenerationForm.addEventListener("submit", function (event) {
+      // Prevent form submission
+      event.preventDefault();
+      let qrContent = qrContentInput.value;
+      if (qrCode == null) {
+          
+        // Generate code initially
+        qrCode = generateQrCode(qrContent);
+      } else {
+          
+        // If code already generated then make 
+        // again using same object
+        qrCode.makeCode(qrContent);
+      }
+    });
+</script> -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+  
+  <script type="text/javascript">
+    var qrcode = new QRCode(document.getElementById("qrcode"), {
+      text: "http://jindo.dev.naver.com/collie",
+      width: 128,
+      height: 128,
+      colorDark : "#000000",
+      colorLight : "#ffffff",
+      correctLevel : QRCode.CorrectLevel.H
+      
+    });
+    // const qrModal = document.getElementById('qr-modal');
+    // qrModal.style.display = 'flex';
+
+    </script>
+
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.js"></script> -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/jsqr@1.4.0/dist/jsQR.min.js"></script> -->
+  <script src="{{ url_for('static', filename='script.js') }}" defer></script>
+</body>
+
+</html>

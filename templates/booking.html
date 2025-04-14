@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalesCon Home Page</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+        <a href="{{ url_for('home') }}">
+            <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo" />
+        </a>
+    </div>
+    <div class="nav-right">
+        <a href="{{ url_for('home') }}">Home</a>
+        <a href="{{ url_for('about') }}">About</a>
+        <a href="{{ url_for('contact') }}">Contact Us</a>
+        <a href="{{ url_for('profile') }}" id="profile-button">Profile</a>
+    </div>
+</nav>
+
+<div class="container" id="booking_page">
+
+  <h1>Booking Confirmation</h1> 
+  <div id="info-list"> 
+    <!-- Events will be dynamically inserted here -->
+  </div> 
+  <div id="booking-list"> 
+    <!-- Events will be dynamically inserted here -->
+  </div> 
+  <div id="events-list"> 
+    <!-- Events will be dynamically inserted here -->
+  </div> 
+  <div class="modal-footer justify-content-center">
+    <button type="button" class="btn btn-default close-btn btn-primary close-modal qrmodal" data-dismiss="modal">Close</button>
+  </div>
+  
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+<script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<script src="{{ url_for('static', filename='booking.js') }}" defer></script>
+
+</body>
+</html>

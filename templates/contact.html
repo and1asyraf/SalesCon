@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/contactStyles.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/home2">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/home2">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/profile" id="profile-button">Profile</a>
+    </nav> 
+
+    <!-- Team Photo Section -->
+    <section class="team-section">
+        <h2>Meet The Team</h2>
+        <p>We're the team behind SalesCon, working together to connect vendors and events seamlessly.</p>
+        
+        <!-- Team Photos -->
+        <div class="team-row">
+            <div class="image-container">
+                <img class="team-photo" src="{{ url_for('static', filename='images/ArdyPhoto.png') }}" alt="Team Member 1">
+            </div>
+            <div class="image-container">
+                <img class="team-photo" src="{{ url_for('static', filename='images/ArifPhoto.jpeg') }}" alt="Team Member 2">
+            </div>
+            <div class="image-container">
+                <img class="team-photo" src="{{ url_for('static', filename='images/CapopPhoto.jpg') }}" alt="Team Member 3">
+            </div>
+            <div class="image-container">
+                <img class="team-photo" src="{{ url_for('static', filename='images/ZaimPhoto.jpg') }}" alt="Team Member 4">
+            </div>
+            <div class="image-container">
+                <img class="team-photo" src="{{ url_for('static', filename='images/Aviniish Formal.jpg') }}" alt="Team Member 5">
+            </div>
+        </div>
+    </section>
+</body>
+</html>

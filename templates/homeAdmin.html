@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalesCon Home Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/homeAdminStyles.css') }}">
+
+</head>
+    <nav>
+        <div class="nav-left">
+            <a href="/homeAdmin">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo" />
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/addEvent">Add Event</a>
+            <a href="/aboutAdmin">About</a>
+            <a href="/contactAdmin">Contact Us</a>
+            <a href="/profileAdmin" id="profile-button">Profile</a>
+        </div>
+    </nav>
+
+    <h1>Your Events</h1> 
+
+    <h2>Your Ratings</h2>
+
+
+
+  
+</body>
+</html>

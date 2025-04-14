@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalesCon Home Page</title>
+
+      <!-- Bootstrap core CSS -->
+  <link href="https://getbootstrap.com/docs/5.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+  <link rel="icon" href="https://getbootstrap.com/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+</head>
+
+<body>
+  <nav>
+    <div class="nav-left">
+        <a href="/home2">
+            <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo" />
+        </a>
+    </div> 
+    <div class="nav-right">
+        <a href="/home2">Home</a>
+        <a href="/about">About</a>
+        <a href="/contact">Contact Us</a>
+        <a href="/profile" id="profile-button">Profile</a>
+    </div>
+</nav>
+
+<div class="container">
+
+  <h1>Event Booking</h1> 
+
+  <div id="events-list"> 
+    <!-- Events will be dynamically inserted here -->
+  </div> 
+  
+</div>
+
+<div id="payment-modal" class="modal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h4 class="modal-title">Booking Form</h4>
+      <button type="button" class="close close-modal paymentmodal btn btn-lg" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true" class="big">×</span>
+      </button>
+    </div>
+    <div class="modal-body text-center">
+      <div class="row">
+        <div class="row text-left">
+          <h4 class="mb-3">Booking Info</h4>
+        </div>
+        <div class="col-12 mb-4">
+          <div class="row ml-5">
+            <div class="col-md-3 col-sm-6">
+              <h6 class="my-0">Event name</h6>
+              <small id="BookEventName" class="text-primary"></small>
+            <!-- <span class="text-muted">$12</span> -->
+            </div>
+            <div class="col-md-3 col-sm-6">
+              <h6 class="my-0">Location</h6>
+              <small id="BookLocationName" class="text-primary"></small>
+              <!-- <span class="text-muted">$8</span> -->
+            </div>
+          </div>
+          
+        </div>
+        <div class="row text-left">
+          <div class="col-12">
+            <h4 class="mb-3">Billing address</h4>
+            <form id="payment-form" class="needs-validation" >
+              <input type="hidden" id="eventId" name="eventId">
+              <div class="row">
+                <div class="col-md-4">
+                  <label for="firstName" class="form-label">First name</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid first name is required.
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <label for="lastName" class="form-label">Last name</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
+                  <div class="invalid-feedback">
+                    Valid last name is required.
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <label for="email" class="form-label">Email</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="email" class="form-control" id="email" placeholder="you@example.com">
+                  <div class="invalid-feedback">
+                    Please enter a valid email address for booking purposes.
+                  </div>
+                </div>
+       
+                <div class="col-md-4">
+                    <label for="stall" class="form-label">Stall Name </label>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control" id="stall" placeholder="">
+                    <div class="invalid-feedback">
+                      Please enter a valid stall name for booking purposes.
+                    </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <label for="address" class="form-label">Address</label>
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" id="address" placeholder="1234 Main St" required>
+                  <div class="invalid-feedback">
+                    Please enter your residence address.
+                  </div>
+                </div>
+    
+                <div class="col-md-4">
+                  <label for="state" class="form-label">State</label>
+                </div>
+                <div class="col-md-6">
+                  <select class="form-select" id="state" required>
+                    <option value="">Choose...</option>
+                    <option value="Johor">Johor</option>
+                    <option value="Kedah">Kedah</option>
+                    <option value="Kelantan">Kelantan</option>
+                    <option value="Melaka">Melaka</option>
+                    <option value="Negeri Sembilan">Negeri Sembilan</option>
+                    <option value="Pahang">Pahang</option>
+                    <option value="Perak">Perak</option>
+                    <option value="Perlis">Perlis</option>
+                    <option value="Pulau Pinang">Pulau Pinang</option>
+                    <option value="Selangor">Selangor</option>
+                    <option value="Terengganu">Terengganu</option>
+                    <option value="Kuala Lumpur">Kuala Lumpur</option>
+                    <option value="Labuan">Labuan</option>
+                    <option value="Putrajaya">Putrajaya</option>
+                  </select>
+                  <div class="invalid-feedback">
+                    Please provide a valid state.
+                  </div>
+                </div>
+    
+                <hr class="my-4">
+    
+                <h4 class="mb-3">Payment</h4>
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="">Card Type</label>
+                  </div>
+                  <div class="col-xs-6 col-sm-3 col-md-2 col-lg-2">
+                    <div class="form-check">
+                      <input id="credit" name="paymentMethod" type="radio" class="form-check-input" checked required>
+                      <label class="form-check-label" for="credit">Credit card</label>
+                    </div>
+                    <div class="form-check">
+                      <input id="debit" name="paymentMethod" type="radio" class="form-check-input" required>
+                      <label class="form-check-label" for="debit">Debit card</label>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md-4">
+                    <label for="cc-name" class="form-label">Name on card</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="cc-name" placeholder="" required>
+                    <small class="text-muted">Full name as displayed on card</small>
+                    <div class="invalid-feedback">
+                      Name on card is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="cc-number" class="form-label">Credit card number</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" id="cc-number" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Credit card number is required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="cc-expiration" class="form-label">Expiration</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="number" class="form-control" id="cc-expiration" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Expiration date required
+                    </div>
+                  </div>
+      
+                  <div class="col-md-4">
+                    <label for="cc-cvv" class="form-label">CVV</label>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" id="cc-cvv" placeholder="" required>
+                    <div class="invalid-feedback">
+                      Security code required
+                    </div>
+                  </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                  <button type="button" class="btn btn-default close-btn close-modal paymentmodal" data-dismiss="modal">Close</button>
+                  <button class="text-center btn btn-primary btn-lg" type="submit">Checkout</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Rating Modal -->
+<div id="rating-modal" class="modal">
+    <div class="modal-content">
+      <h2>Rate Hygiene</h2>
+      <form id="rating-form" class="modal-form">
+        <div class="form-group">
+          <label for="rating" class="form-label">Your Rating:</label>
+          <input 
+            type="number" 
+            id="rating" 
+            min="1" 
+            max="5" 
+            placeholder="Rate between 1 to 5"
+            required 
+            class="form-input">
+        </div>
+  
+        <div class="form-group">
+          <label for="feedback" class="form-label">Your Feedback:</label>
+          <textarea 
+            id="feedback" 
+            rows="4" 
+            placeholder="Share your thoughts about the event..." 
+            class="form-textarea"></textarea>
+        </div>
+  
+        <div class="modal-actions">
+          <button type="submit" class="btn primary-btn">Submit Rating</button>
+          <button id="close-rating-modal" type="button" class="btn secondary-btn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+<div id="qr-modal" class="modal">
+  <div class="modal-content">
+    <h2>Booking Confirmation</h2>
+    <p>Thank you for booking!</p>
+      <div id="qrcode" class="qrcodec"></div>
+      <div id="qrurl"></div>
+      <div class="modal-footer justify-content-center">
+        <button type="button" class="btn btn-default close-btn btn-primary close-modal qrmodal" data-dismiss="modal">Close</button>
+      </div>
+
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+
+  <script src="https://getbootstrap.com/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="{{ url_for('static', filename='script2.js') }}" defer></script>
+</body>
+
+</div>
+<div class="container">
+    <h1 class="main-heading">Crowd and Food Sales Prediction</h1>
+    <p class="intro-text">Welcome to SalesCon's prediction platform! Here, you can explore our crowd and food sales prediction services to help you plan and optimize your events and sales strategies. By leveraging data analytics and machine learning, we provide accurate forecasts to guide your decision-making process and enhance your business operations.</p>
+    
+    <!-- Section for Food Prediction -->
+    <div id="foodPrediction" class="prediction-section">
+      <h2 class="section-heading">Food Prediction</h2>
+      <p class="section-text">Food prediction is the process of forecasting the quantity of food needed for a specific event or business operation based on several factors. This prediction is important for ensuring that the right amount of food is available, reducing waste, and optimizing costs. Various data sources such as past consumption patterns, event size, guest preferences, and even weather conditions are used to predict how much food should be prepared.</p> 
+      <p class="section-text">For example, restaurants use food prediction to estimate how much of each dish to prepare based on customer traffic and dining habits. Event planners also rely on food predictions to ensure that there is enough food for everyone without over-preparing, which can lead to unnecessary food waste. With accurate food predictions, businesses can offer a better customer experience, maintain efficiency, and reduce environmental impact by managing food waste effectively.</p>
+      <p class="section-tail">"Curious about how much food you'll need? Click the image to uncover the insights!"</p>
+      <div class="image-container">
+        <a href="/food">
+          <img src="{{ url_for('static', filename='images/foodprediction.jpg') }}" alt="Food Prediction" class="prediction-image">
+        </a>
+      </div>
+    </div>
+  
+    <!-- Section for Crowd Prediction -->
+    <div id="crowdPrediction" class="prediction-section">
+      <h2 class="section-heading">Crowd Prediction</h2>
+      <p class="section-text">Crowd prediction refers to the process of forecasting the number of people who will attend a specific event or gather in a particular location at a given time. This prediction is essential for organizers, businesses, and public services to plan for appropriate resources, staffing, and safety measures. By analyzing historical data, weather patterns, seasonal trends, and event types, algorithms can estimate the crowd size accurately.</p> 
+      <p class="section-text">For instance, crowd prediction can help event organizers prepare for the expected number of attendees, ensuring enough seating, food, and security personnel. It can also assist businesses in managing customer flow during peak hours, optimizing sales, and minimizing overcrowding. With advancements in technology, such as AI and machine learning, crowd prediction has become more precise, enabling better decision-making and resource management in various sectors, from entertainment to retail.</p>
+      <p class="section-tail">"Wondering how many people? Click the image to explore our crowd insights and plan ahead with ease!"</p>
+      <div class="image-container">
+        <a href="/crowd">
+          <img src="{{ url_for('static', filename='images/crowdprediction.jpg') }}" alt="Crowd Prediction" class="prediction-image">
+        </a>
+      </div>
+    </div>
+  </div>
+
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-container">
+        <h2 id="form-title">Sign Up as Vendor</h2>
+        <div class="toggle-container">
+          <button id="vendor-toggle" class="active">Vendor</button>
+          <button id="organizer-toggle">Organizer</button>
+        </div>
+        <form id="signup-form">
+          <input type="email" id="signup-email" placeholder="Email" required />
+          <input
+            type="password"
+            id="signup-password"
+            placeholder="Password"
+            required
+          />
+          <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm Password"
+            required
+          />
+          <input
+            type="text"
+            id="organization-name"
+            placeholder="Business Name / Organization Name"
+            required
+            style="display: block"
+          />
+          <button type="submit">Sign Up</button>
+        </form>
+        <p>Already have an account? <a href="/">Login</a></p>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="{{ url_for('static', filename='auth.js') }}"></script>
+    <script>
+      // Elements for toggling
+      const vendorToggle = document.getElementById("vendor-toggle");
+      const organizerToggle = document.getElementById("organizer-toggle");
+      const formTitle = document.getElementById("form-title");
+      const organizationNameField =
+        document.getElementById("organization-name");
+
+      // Event listeners for toggle buttons
+      vendorToggle.addEventListener("click", () => {
+        formTitle.textContent = "Sign Up as Vendor";
+        vendorToggle.classList.add("active");
+        organizerToggle.classList.remove("active");
+        organizationNameField.placeholder = "Business Name"; // Set the placeholder to "Business Name" for Vendor
+        userRole = "vendor"; // Set role to vendor
+      });
+
+      organizerToggle.addEventListener("click", () => {
+        formTitle.textContent = "Sign Up as Organizer";
+        organizerToggle.classList.add("active");
+        vendorToggle.classList.remove("active");
+        organizationNameField.placeholder = "Organization Name"; // Set the placeholder to "Organization Name" for Organizer
+        userRole = "organizer"; // Set role to organizer
+      });
+    </script>
+  </body>
+</html>

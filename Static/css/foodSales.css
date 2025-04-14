@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('../images/SalesConBackground.jpg'); /* Background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Navigation Bar */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(51, 51, 51, 0.8);
+    padding: 10px 20px;
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+  }
+  
+  .nav-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  #nav-logo {
+    width: 150px;
+    height: auto;
+  }
+  
+  .nav-right a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: all 0.3s;
+  }
+  
+  .nav-right a:hover {
+    background-color: #ddd;
+    color: #333;
+  }
+  
+  /* Container Styles */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin-bottom: 30px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Links container for navigation */
+.link-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Styling for individual links */
+.prediction-link {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.2em;
+  color: #fff;
+  text-decoration: none;
+  background-color: #007bff;
+  border-radius: 50px;
+  font-weight: 600;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.prediction-link:hover {
+  background-color: #0056b3;
+  transform: scale(1.05);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.prediction-link:active {
+  background-color: #004085;
+  transform: scale(0.95);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section for each prediction with heading and content */
+.prediction-section {
+  margin-top: 50px;
+  text-align: center;
+  padding: 20px;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.prediction-section h2 {
+  font-size: 2rem;
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.prediction-section p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 25px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Container for images (side by side) */
+.image-container {
+  margin-top: 30px;
+  display: flex; /* Use flexbox to align the images horizontally */
+  justify-content: center; /* Center the images horizontally */
+  gap: 20px; /* Add spacing between the images */
+}
+
+/* Styling for images (as clickable buttons) */
+.prediction-image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+  flex: 0 0 auto; /* Prevent the images from shrinking */
+}
+
+.prediction-image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.prediction-image:active {
+  transform: scale(0.95);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+    /* Style the select dropdown and button */
+  #predictionForm select, #predictBtn {
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 2px solid #4CAF50;
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    margin-bottom: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Hover effect for select dropdown */
+  #predictionForm select:hover, #predictBtn:hover {
+    background-color: #4CAF50;
+    color: white;
+    border-color: #388E3C;
+    cursor: pointer;
+  }
+
+  /* Focus effect for select dropdown */
+  #predictionForm select:focus, #predictBtn:focus {
+    outline: none;
+    border-color: #388E3C;
+    box-shadow: 0 0 10px rgba(56, 142, 172, 0.5);
+  }
+
+  /* Button styling */
+  #predictBtn {
+    background-color: #4CAF50;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Button hover effect */
+  #predictBtn:hover {
+    background-color: #388E3C;
+    transition: background-color 0.3s ease;
+  }
+
+  /* Styling for form labels */
+  label {
+    font-size: 18px;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-top: 20px;
+  }
+
+  
+  /* Event Styles */
+  .event {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+  }
+  
+  .event h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  
+  .event p {
+    margin: 5px 0;
+  }
+  
+  .event button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .event button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Modal Styles */
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    text-align: center;
+  }
+  
+  #close-modal {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  #close-modal:hover {
+    background-color: #c82333;
+  }
+  
+  #predictionChart {
+    display: block;
+    margin: 50px auto; /* Adjust the space around the chart */
+    max-width: 100%;
+    height: 1000px; /* Increase the height to make the chart longer vertically */
+  }
+  
+  /* Chart Canvas */
+  canvas {
+    display: block;
+    margin: 200px auto;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative; 
+
+  }
+
+  h5 {
+    margin-top: 10px; /* Reduce space above the heading */
+    margin-bottom: 10px; /* Reduce space below the heading */
+    text-align: center;
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h5 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 3.5rem;
+    font-weight: 600;
+    text-align: center;
+    color: #073d7b;
+    transition: color 0.3s, transform 0.3s;
+  }
+  
+  h5:hover {
+    color: #e74c3c; /* Change color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+  }
+
+#foodImagesContainer {
+  margin-top: 10px; /* Reduce space above the food images */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+  .food-item:hover .food-image {
+    transform: translateY(-10px) scale(1.1); /* Move up and zoom in */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for a lifted effect */
+  }
+
+  .food-images-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap to the next row */
+    justify-content: space-between; /* Space between each row of items */
+    gap: 20px; /* Adds consistent spacing between items */
+    margin-top: 10px;
+  }
+  
+  .food-item {
+    flex: 1 1 calc(33.33% - 20px); /* Each item takes 1/3 of the row minus the gap */
+    max-width: calc(33.33% - 20px); /* Ensures proper width alignment */
+    font-size: 1.2rem; /* Adjust font size for readability */
+    font-weight: bold; /* Make the text bold */
+    color: #333; /* Dark color for better contrast */
+    text-align: center; /* Center align the text */
+    margin-top: 10px; /* Space between the image and the text */
+  }
+
+  .food-item p:first-child {
+    font-size: 1.5rem; /* Larger font size for the food name */
+    color: #2c3e50; /* Darker color for the food name */
+    text-transform: uppercase; /* Make the food name all uppercase */
+  }
+  
+  .food-item p:last-child {
+    font-size: 1.0rem; /* Slightly smaller size for the prediction text */
+    color: #1a24b1; /* Use a contrasting color for the prediction */
+    font-style: italic; /* Italicize the prediction text for emphasis */
+  }
+  
+  .food-name {
+    font-size: 16px; /* Adjust size for food name */
+    font-weight: bold;
+    margin: 5px 0; /* Add space above and below */
+    text-align: center; /* Center align the name */
+    color: #333; /* Change the color if needed */
+  }
+  
+  .food-image {
+    display: block;
+    margin: 0 auto; /* Center the image */
+    width: 150px; /* Set the width */
+    height: 150px; /* Set the height */
+    object-fit: cover; /* Ensure image fits the box */
+    border-radius: 8px; /* Optional: rounded corners */
+  }
+  
+  .food-item p {
+    margin: 5px 0; /* Adjust margin for labels */
+    font-size: 14px;
+    text-align: center;
+  }  
+  
+  
+  /* Ensure responsiveness */
+  @media (max-width: 768px) {
+    .food-item {
+      flex: 1 1 calc(50% - 10px); /* Two items per row for smaller screens */
+      max-width: calc(50% - 10px);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .food-item {
+      flex: 1 1 100%; /* One item per row for very small screens */
+      max-width: 100%;
+    }
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .nav-right {
+      margin-top: 10px;
+    }
+  
+    .container {
+      padding: 15px;
+    }
+  
+    .event {
+      padding: 15px;
+    }
+  
+    .event button {
+      font-size: 0.9rem;
+    }
+  
+    button {
+      font-size: 0.9rem;
+    }
+  }
+  

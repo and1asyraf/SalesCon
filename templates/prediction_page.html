@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crowd Prediction</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/crowdPredict.css') }}">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="{{ url_for('static', filename='script/script.js')}}" defer></script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <div class="nav-left">
+      <a href="/home2"> 
+        <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo">
+      </a>
+    </div>
+    <div class="nav-right">
+      <a href="/home2">Home</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact Us</a>
+      <a href="/profile" id="profile-button">Profile</a>
+    </div>
+  </nav>
+
+  <header>
+    <h1>Crowd Prediction</h1>
+    <p>Enter the details to predict the crowd size at your chosen place!</p>
+  </header>
+
+  <div class="form-container">
+    <form method="POST" action="/predict_model2">
+      <label for="hour">Hour:</label>
+      <select id="hour" name="hour" required>
+        <option value="10">10:00</option>
+        <option value="11">11:00</option>
+        <option value="12">12:00</option>
+        <option value="13">13:00</option>
+        <option value="14">14:00</option>
+        <option value="15">15:00</option>
+        <option value="16">16:00</option>
+        <option value="17">17:00</option>
+        <option value="18">18:00</option>
+        <option value="19">19:00</option>
+        <option value="20">20:00</option>
+        <option value="21">21:00</option>
+        <option value="22">22:00</option>
+        <option value="23">23:00</option>
+      </select><br><br>
+
+      <label for="day">Day:</label>
+      <select id="day" name="day" required>
+        <option value="Sunday">Sunday</option>
+        <option value="Monday">Monday</option>
+        <option value="Tuesday">Tuesday</option>
+        <option value="Wednesday">Wednesday</option>
+        <option value="Thursday">Thursday</option>
+        <option value="Friday">Friday</option>
+        <option value="Saturday">Saturday</option>
+      </select><br><br>
+
+      <label for="place">Place:</label>
+      <select id="place" name="place" required>
+        <option value="Padang Convex">Padang Convex</option>
+        <option value="Padang Aman">Padang Aman</option>
+        <option value="Permatang Pelajar">Permatang Pelajar</option>
+      </select><br><br>
+
+      <label for="result_type">Result Type:</label>
+      <select id="result_type" name="result_type" required>
+        <option value="single">Single Prediction</option>
+        <option value="graph">Graph</option>
+      </select><br><br>
+
+      <button type="submit">Predict</button>
+    </form>
+  </div>
+
+  <footer>
+    <div class="footer-content">
+      <p>&copy; 2025 SalesCon. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

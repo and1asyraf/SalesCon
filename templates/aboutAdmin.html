@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About SalesCon</title>aboutStyles
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/aboutStyles.css') }}"> <!-- Link to your CSS file -->
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="nav-left">
+            <a href="/homeAdmin">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/homeAdmin">Home</a>
+            <a href="/addEvent">Add Event</a>
+            <a href="/aboutAdmin">About</a>
+            <a href="/contactAdmin">Contact Us</a>
+            <a href="/profileAdmin" id="profile-button">Profile</a>
+    </nav>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h2>About SalesCon</h2>
+        <p>Welcome to SalesCon! We are your all-in-one platform designed to streamline vendor management and event organization on the Universiti Sains Malaysia campus. Whether you're a vendor, organizer, or attendee, SalesCon offers a seamless experience for everyone involved in campus events.</p>
+
+        <h3>Our Mission</h3>
+        <p>To create a collaborative platform that simplifies vendor registration, slot booking, and payment processes, while enhancing compliance and analytics for better decision-making.</p>
+
+        <h3>Core Features</h3>
+        <ul>
+            <li>Centralized vendor management system</li>
+            <li>Seamless slot booking process</li>
+            <li>Hygiene and compliance tracking</li>
+            <li>Integrated payment system</li>
+            <li>Event analytics for better decision-making</li>
+        </ul>
+
+        <h3>Why Choose SalesCon?</h3>
+        <p>With SalesCon, we aim to revolutionize how campus events are organized, making them more efficient, transparent, and enjoyable for everyone.</p>
+    </section>
+</body>
+</html>

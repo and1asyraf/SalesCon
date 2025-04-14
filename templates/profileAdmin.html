@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/profileStyles.css') }}">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <a href="/home2">
+                <img src="{{ url_for('static', filename='images/SalesConLogo.png') }}" alt="SalesCon Logo" id="nav-logo">
+            </a>
+        </div>
+        <div class="nav-right">
+            <a href="/homeAdmin">Home</a>
+            <a href="/about">About</a>
+            <a href="/contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <div class="profile-container">
+        <h1>Your Profile</h1>
+        <div id="profile-details">
+            <p><strong>Name:</strong> <span id="user-name">Loading...</span></p>
+            <p><strong>Email:</strong> <span id="user-email">Loading...</span></p>
+            <p><strong>Role:</strong> <span id="user-role">Loading...</span></p>
+        </div>
+        <div id="error-message">Failed to load profile data.</div>
+        <form id="signout-form"> 
+            <button type="submit">Sign Out</button>
+        </form>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <script src="{{ url_for('static', filename='profileScript.js') }}"></script>
+</body>
+</html>
