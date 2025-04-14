@@ -35,9 +35,3 @@ Backend: Flask (Python)
 Database: SQLite / MySQL (based on implementation)
 
 AI Integration: Event analytics, slot prediction, or chatbot (optional enhancement) 
-
-# 👨‍💻 Contributors
-1. Andi Asyraf 
-2. Ardy Qawi 
-3. Arif Hakim 
-4. Ahmad Za'im 
